@@ -1,118 +1,99 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <html lang="en">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Youtube</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sytle.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <script src="main.js" defer></script>
+  <title>youtube clone</title>
 </head>
 <body>
   <!-- header -->
   <header>
-    <span class="logo">
+
+    <span class="logos">
       <i class="fa-brands fa-youtube"></i>
-      <span class="title">Youtube</span>
+      <span class="logo">Youtube</span>
     </span>
-    <span class="icons">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <i class="fa-solid fa-user-graduate"></i>
-    </span>
+    <span class="search"><i class="fa-solid fa-magnifying-glass"></i></span>
+    <span class="avatarBtn"><img src="avatar.PNG" alt="avatar" class="avatar"></span>
   </header>
 
-  <!-- Video player -->
-  <section class="player">
-    <video controls src="https://youtu.be/67stn7Pu7s4">Sorry, your brower doesn't support embedded videos.</video>
-  </section>
-
-<div class="infoAndUpNext">
-    <!-- information -->
-    <section class="info">
-
-      <!-- metadata -->
-      <div class="metadata">
-        <ul class="hashtags">
-          <li>#DreamCoding</li>
-          <li>#DreamCoders</li>
-          <li>#Ellie</li>
-        </ul>
-        <div class="titleAndButton">
-          <span class="title clamp">
-            Clone Coding: Youtube Mobile Website 유투브 모바일 웹사이트 따라만들기 
-            | 프론트엔드 개발자 입문편: HTML, CSS, Javascript and what you need anaything you can get</span>
-          <button class="moreBtn">
-            <i class="fa-solid fa-caret-down"></i>
-          </button>
-        </div>
-      <span class="views">1M views 1 month ago</span>
-      </div>
-  
-      <!-- action Btn -->
-      <ul class="actions">
-        <li><button><i class="active fa-solid fa-thumbs-up"></i><span>1M</span></button></li>
-        <li><button><i class="fa-solid fa-thumbs-down"></i><span>2k</span></button></li>
-        <li><button><i class="fa-solid fa-link"></i><span>share</span></button></li>
-        <li><button><i class="fa-solid fa-plus"></i><span>add</span></button></li>
-        <li><button><i class="fa-solid fa-money-bill-1"></i><span>donate</span></button></li>
-      </ul>
-  
-      <!-- chanel description -->
-      <div class="channel">
+  <!-- video&info + upnext -->
+  <div class="videoAndInfoAndUpNext">
+    <!-- Video+info -->
+    <div class="videoAndInfo">
+      <!-- video player -->
+      <section class="videoplayer">
+        <!-- 유투브 영상은 iframe으로 가져옴. src주소 뒤에 ?붙이고 각 매개변수를 넣으면 적용됨. 매개변수 여러개는 &로 구분 -->
+        <iframe class="videoplayer-iframe" src="https://www.youtube.com/embed/67stn7Pu7s4?autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- <video autoplay controls src="https://youtu.be/67stn7Pu7s4" type="video/mp4"></video> -->
+      </section>
+      <!-- informaiton about video-->
+      <section class="info">
+        
+        <!-- metadata -->
         <div class="metadata">
-          <img src="img.png" alt="">
-          <div class="info">
-            <span class="name">드림코딩 by.엘리</span>
-            <span class="subscribers">1M subscribers</span>
+
+          <ul class="hashtags">
+            <li>#DreamCoding</li>
+            <li>#Frontend</li>
+            <li>#Ellie</li>
+          </ul>
+
+          <div class="titleAndBtn">
+            <span class="title clamp">
+              클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) | 프론트엔드 개발자 입문편: HTML, CSS, Javascript and more and more
+            </span>
+            <button class="clampBtn"><i class="fa-solid fa-caret-down"></i></button>
           </div>
+
+          <div class="views">14k views 1 month ago</div>
         </div>
-        <button class="subscribe">subscribe</button>
-      </div>
-    </section>
-  
+
+        <ul class="actions">
+            <li><button><i class="fa-solid fa-thumbs-up"></i><span>1k</span></button></li>
+            <li><button><i class="fa-solid fa-thumbs-down"></i><span>0</span></button></li>
+            <li><button><i class="fa-solid fa-share"></i><span>Share</span></button></li>
+            <li><button><i class="fa-solid fa-plus"></i><span>Save</span></button></li>
+            <li><button><i class="fa-solid fa-flag"></i><span>Report</span></button></li>
+        </ul>
+
+        <div class="channelInfo">
+          <div class="namecard">
+            <div class="img"><img src="avatar.PNG" alt="" class="avatar"></div> 
+            <div class="nameAndSubs">
+              <div class="name">드림코딩 by.엘리</div>
+              <div class="subscribers">1M subscribers</div>
+            </div>
+          </div>
+          <button class="subscribe">subscribe</button>
+        </div>
+
+      </section>
+    </div>
+
     <!-- upNext -->
     <section class="upNext">
-      <span class="title">up next</span>
-      <ul>
-        <li class="item">
-          <div class="img"><img src="img.png" alt=""></div>
-          <div class="info">
-            <span class="title">프론트엔드 강의, "개발자가 되고싶다면?" 웹 입문 강의를 시작합니다.</span>
-            <span class="name">드림코딩 by.엘리</span>
-            <span class="views">423kviews</span>
-          </div>
-          <button class="moreBtn">
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-          </button>
-        </li>
-        <li class="item">
-          <div class="img"><img src="img.png" alt=""></div>
-          <div class="info">
-            <span class="title">프론트엔드 강의, "개발자가 되고싶다면?" 웹 입문 강의를 시작합니다.</span>
-            <span class="name">드림코딩 by.엘리</span>
-            <span class="views">423kviews</span>
-          </div>
-          <button class="moreBtn">
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-          </button>
-        </li>
-        <li class="item">
-          <div class="img"><img src="img.png" alt=""></div>
-          <div class="info">
-            <span class="title">프론트엔드 강의, "개발자가 되고싶다면?" 웹 입문 강의를 시작합니다.</span>
-            <span class="name">드림코딩 by.엘리</span>
-            <span class="views">423kviews</span>
-          </div>
-          <button class="moreBtn">
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-          </button>
-        </li>
-      </ul>
+      <span class="title">Up Next</span>
+      <div class="cards">
+        <img src="thumnail.jpeg" alt="" class="thumbnail">
+        <div class="metadata">
+          <div class="title">클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) | 프론트엔드 개발자 입문편:</div>
+          <div class="name">드림코딩 by.엘리</div>
+          <div class="views">13k views</div>
+        </div>
+        <span class="overflowMenu">
+          <!-- icon 넣을 때 span, div 꼭 필요한가..? -->
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </span>
+      </div>
     </section>
-</div>
+  </div>
 </body>
-</html> 
+</html>
