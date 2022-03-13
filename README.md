@@ -19,3 +19,4 @@ Youtube clone with different methods
 - 화면 변화에 따라 비디오 크기가 유동적으로 바뀐다.
 - 화면이 커지면 upNext가 오른쪽으로 배치되도록 했다.
 
+<img src="https://user-images.githubusercontent.com/85356011/158045777-e003f0bf-62ec-446e-8169-26fc7e21fd5d.gif"
